@@ -9,7 +9,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box= "chef/centos-6.5"
-  config.vm.box_url= "https://vagrantcloud.com/chef/centos-6.5/version/1/provider/virtualbox.box"
+  #config.vm.box_url= "https://vagrantcloud.com/chef/centos-6.5/version/1/provider/virtualbox.box"
   config.vm.provision "shell", inline: $script
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--memory", "1024"]
